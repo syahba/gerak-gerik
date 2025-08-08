@@ -7,7 +7,7 @@ import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/gerak-gerik">
       <Routes>
         <Route path="/" element={<HomePage></HomePage>}></Route>
         <Route path="/login" element={<LoginPage></LoginPage>}></Route>
