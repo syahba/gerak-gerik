@@ -12,7 +12,7 @@ function App() {
         <Route path="/final" element={<FinalPage></FinalPage>}></Route>
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

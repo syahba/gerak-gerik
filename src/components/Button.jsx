@@ -1,4 +1,6 @@
-function Button({ is_light = true, is_primary = true, text }) {
+import PropTypes from "prop-types";
+
+function Button({ is_light, is_primary, text }) {
   let styles;
 
   if (is_light) {
@@ -8,7 +10,7 @@ function Button({ is_light = true, is_primary = true, text }) {
       styles = `text-[var(--primary-color)] bg-transparent 
       outline outline-2 outline-[var(--primary-color)] outline-offset-[-4px]`;
     }
-  } else {
+  } else if (!is_light) {
     if (is_primary) {
       styles = "text-[var(--primary-color)] bg-[var(--secondary-color)]";
     } else {
@@ -19,11 +21,18 @@ function Button({ is_light = true, is_primary = true, text }) {
 
   return (
     <button
-      className={`${styles} px-5 py-2 rounded-full hover:scale-110 transition duration-500`}
+      className={`${styles} px-5 py-1.5 rounded-full 
+      hover:scale-110 transition duration-500`}
     >
-      <p className="font-bold">Hello</p>
+      <p>{text}</p>
     </button>
   );
 }
+
+Button.propTypes = {
+  is_light: PropTypes.bool,
+  is_primary: PropTypes.bool,
+  text: PropTypes.string,
+};
 
 export default Button;
