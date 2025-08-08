@@ -8,7 +8,7 @@ function Button({ is_light, is_primary, text, onClick }) {
       styles = "text-[var(--white-color)] bg-[var(--primary-color)]";
     } else {
       styles = `text-[var(--primary-color)] bg-transparent 
-      outline outline-2 outline-[var(--primary-color)] outline-offset-[-4px]`;
+      outline outline-2 outline-[var(--primary-color)] outline-offset-[-1.5px]`;
     }
   } else if (!is_light) {
     if (is_primary) {

@@ -31,3 +31,11 @@ h1 {
   font-size: 1.75rem;
   font-weight: 700;
 }
+
+.screen {
+  @apply min-h-screen flex flex-col items-center;
+}
+
+.content {
+  @apply flex-1 flex flex-col items-center justify-center;
+}
