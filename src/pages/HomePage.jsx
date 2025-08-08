@@ -4,11 +4,21 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "../index.css";
 import { getWorkoutStatus } from "../utils/tracker";
+import { useEffect, useState } from "react";
 
 function HomePage() {
   const isLight = false;
   const navigate = useNavigate();
   const todayDone = getWorkoutStatus();
+
+  // login
+  useEffect(() => {
+    const tag = localStorage.getItem("viewer");
+
+    if (!tag) {
+      navigate("/login");
+    }
+  }, [navigate]);
 
   return (
     <div className="bg-[var(--primary-color)] screen">

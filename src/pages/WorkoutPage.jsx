@@ -11,11 +11,20 @@ function WorkoutPage() {
   const navigate = useNavigate();
 
   // video carousel
-  const videos = ["1wtm9blsNqk", "gF0WuSkzIjY"];
+  const viewer = localStorage.getItem("viewer");
+  const myVideos = ["1wtm9blsNqk", "gF0WuSkzIjY"];
+  const publicVideos = ["QBqehIDbw5k", "QZOhCZnrowQ"];
   const [index, setIndex] = useState(0);
 
   const handleNext = () => {
-    setIndex((prev) => (prev === videos.length - 1 ? 0 : prev + 1));
+    let length;
+    if (viewer === "elan") {
+      length = myVideos.length;
+    } else {
+      length = publicVideos.length;
+    }
+
+    setIndex((prev) => (prev === length - 1 ? 0 : prev + 1));
   };
 
   // finish workout
@@ -34,7 +43,9 @@ function WorkoutPage() {
         </h1>
 
         <iframe
-          src={`https://www.youtube.com/embed/${videos[index]}?autoplay=0`}
+          src={`https://www.youtube.com/embed/${
+            viewer === "elan" ? myVideos[index] : publicVideos[index]
+          }?autoplay=0`}
           title="Workout Video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
