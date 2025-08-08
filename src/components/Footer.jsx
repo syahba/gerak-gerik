@@ -10,8 +10,7 @@ function Footer({ is_light }) {
   }
 
   return (
-    <footer className="absolute bottom-0 left-0 w-full">
-      <div className={`${styles} flex justify-between items-center px-6 py-2`}>
+    <footer className={`${styles} flex justify-between items-center px-6 py-2 w-full`}>
       <img
         src={is_light ? "./logo-dark.webp" : "./logo-light.webp"}
         alt="logo"
@@ -19,7 +18,6 @@ function Footer({ is_light }) {
       />
 
       <small>Copyright 2025 GerakGerik by Syahba</small>
-      </div>
     </footer>
   );
 }
