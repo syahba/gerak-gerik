@@ -1,6 +1,10 @@
+import Button from "../components/Button";
+
 function HomePage() {
   return (
-    <div></div>
+    <div>
+      <Button></Button>
+    </div>
   );
 }
 
