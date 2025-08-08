@@ -14,14 +14,14 @@ function HomePage() {
       <Navbar is_light={is_light}></Navbar>
 
       {has_workout ? (
-        <div className="content">
+        <section className="content">
           <h2 className="text-[var(--white-color)]">
             Ooh, I love your fiery spirit today! But, you’ve done your workout^^
           </h2>
           <h1 className="text-[var(--secondary-color)] text-[7rem] -mt-5">
             You may rest, honey~
           </h1>
-        </div>
+        </section>
       ) : (
         <section className="content gap-6 my-4">
           <h1 className="text-[var(--white-color)]">
