@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
 
-function Navbar({ is_light }) {
+function Navbar({ isLight }) {
   return (
     <nav
       className={`${
-        is_light ? "bg-[var(--white-color)]" : "bg-[var(--primary-color)]"
+        isLight ? "bg-[var(--white-color)]" : "bg-[var(--primary-color)]"
       } py-2 flex justify-center items-center`}
     >
       <img
-        src={is_light ? "./logo-dark.webp" : "./logo-light.webp"}
+        src={isLight ? "./logo-dark.webp" : "./logo-light.webp"}
         alt="logo"
         className="max-w-14"
       />
@@ -17,7 +17,7 @@ function Navbar({ is_light }) {
 }
 
 Navbar.propTypes = {
-  is_light: PropTypes.bool,
+  isLight: PropTypes.bool,
 };
 
 export default Navbar;

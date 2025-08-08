@@ -2,16 +2,16 @@ const STORAGE_KEY = "workoutlog";
 
 export function logWorkout() {
   const today = new Date().toISOString().split("T")[0]; // yyyy-mm-dd
-  let lot = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+  let log = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
 
   // avoid duplicate log for the same day
   if (!log.includes(today)) {
     log.push(today);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(lot));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(log));
   }
 }
 
-export function hasWorkoutToday() {
+export function getWorkoutStatus() {
   const today = new Date().toISOString().split("T")[0];
 
   const log = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];

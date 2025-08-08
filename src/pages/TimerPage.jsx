@@ -6,7 +6,7 @@ import "../index.css";
 import { useEffect, useState } from "react";
 
 function TimerPage() {
-  const is_light = false;
+  const isLight = false;
   const navigate = useNavigate();
 
   // set timer
@@ -46,7 +46,7 @@ function TimerPage() {
 
   return (
     <div className="bg-[var(--primary-color)] screen">
-      <Navbar is_light={is_light}></Navbar>
+      <Navbar isLight={isLight}></Navbar>
 
       <section className="content my-2">
         <h1 className="text-[var(--white-color)]">
@@ -58,14 +58,14 @@ function TimerPage() {
         </h1>
 
         <Button
-          is_light={is_light}
-          is_primary={true}
+          isLight={isLight}
+          isPrimary={true}
           text={"Okay, all good now. LET’S GO, BABY!"}
           onClick={handleStop}
         ></Button>
       </section>
 
-      <Footer is_light={is_light}></Footer>
+      <Footer isLight={isLight}></Footer>
     </div>
   );
 }

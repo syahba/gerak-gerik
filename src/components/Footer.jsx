@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 
-function Footer({ is_light }) {
+function Footer({ isLight }) {
   let styles;
 
-  if (is_light) {
+  if (isLight) {
     styles = "bg-[var(--white-color)] text-[var(--neutral-color)]"
   } else {
     styles = "bg-[var(--primary-color)] text-[var(--white-color)]"
@@ -12,7 +12,7 @@ function Footer({ is_light }) {
   return (
     <footer className={`${styles} flex justify-between items-center px-6 py-2 w-full`}>
       <img
-        src={is_light ? "./logo-dark.webp" : "./logo-light.webp"}
+        src={isLight ? "./logo-dark.webp" : "./logo-light.webp"}
         alt="logo"
         className="max-w-14"
       />
@@ -23,7 +23,7 @@ function Footer({ is_light }) {
 }
 
 Footer.propTypes = {
-  is_light: PropTypes.bool,
+  isLight: PropTypes.bool,
 };
 
 export default Footer;

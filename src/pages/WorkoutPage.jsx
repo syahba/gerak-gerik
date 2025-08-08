@@ -4,9 +4,10 @@ import Footer from "../components/Footer";
 import Button from "../components/Button";
 import "../index.css";
 import { useState } from "react";
+import { logWorkout } from "../utils/tracker";
 
 function WorkoutPage() {
-  const is_light = true;
+  const isLight = true;
   const navigate = useNavigate();
 
   // video carousel
@@ -17,9 +18,15 @@ function WorkoutPage() {
     setIndex((prev) => (prev === videos.length - 1 ? 0 : prev + 1));
   };
 
+  // finish workout
+  const handleFinish = () => {
+    logWorkout();
+    navigate("/final");
+  };
+
   return (
     <div className="bg-[var(--white-color)] screen">
-      <Navbar is_light={is_light}></Navbar>
+      <Navbar isLight={isLight}></Navbar>
 
       <section className="content gap-5 my-2">
         <h1 className="text-[var(--neutral-color)]">
@@ -36,22 +43,22 @@ function WorkoutPage() {
 
         <div className="flex items-center gap-6 mt-2">
           <Button
-            is_light={is_light}
-            is_primary={false}
+            isLight={isLight}
+            isPrimary={false}
             text={"Maybe a different workout?"}
             onClick={handleNext}
           ></Button>
 
           <Button
-            is_light={is_light}
-            is_primary={true}
+            isLight={isLight}
+            isPrimary={true}
             text={"Woohoo! All done for today, babe!"}
-            onClick={() => navigate("/final")}
+            onClick={handleFinish}
           ></Button>
         </div>
       </section>
 
-      <Footer is_light={is_light}></Footer>
+      <Footer isLight={isLight}></Footer>
     </div>
   );
 }

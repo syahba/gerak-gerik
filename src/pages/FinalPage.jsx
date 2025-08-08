@@ -1,9 +1,12 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { getStreak } from "../utils/tracker";
 
 function FinalPage() {
-  const is_light = false;
-  const streak = 61;
+  const isLight = false;
+
+  // streaks
+  const streak = getStreak();
   const specialStreaks = [3, 7, 14];
   let contents = {};
 
@@ -29,7 +32,7 @@ function FinalPage() {
 
   return (
     <div className="bg-[var(--primary-color)] screen">
-      <Navbar is_light={is_light}></Navbar>
+      <Navbar isLight={isLight}></Navbar>
 
       <section className="content gap-2 my-5">
         <h1 className="text-[var(--secondary-color)] text-5xl">
@@ -46,7 +49,7 @@ function FinalPage() {
         />
       </section>
 
-      <Footer is_light={is_light}></Footer>
+      <Footer isLight={isLight}></Footer>
     </div>
   );
 }

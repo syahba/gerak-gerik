@@ -3,17 +3,18 @@ import Button from "../components/Button";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "../index.css";
+import { getWorkoutStatus } from "../utils/tracker";
 
 function HomePage() {
-  const is_light = false;
+  const isLight = false;
   const navigate = useNavigate();
-  const has_workout = false;
+  const todayDone = getWorkoutStatus();
 
   return (
     <div className="bg-[var(--primary-color)] screen">
-      <Navbar is_light={is_light}></Navbar>
+      <Navbar isLight={isLight}></Navbar>
 
-      {has_workout ? (
+      {todayDone ? (
         <section className="content">
           <h2 className="text-[var(--white-color)]">
             Ooh, I love your fiery spirit today! But, you’ve done your workout^^
@@ -31,15 +32,15 @@ function HomePage() {
 
           <div className="flex flex-col max-w-max gap-4 my-4">
             <Button
-              is_light={is_light}
-              is_primary={true}
+              isLight={isLight}
+              isPrimary={true}
               text={"OH YESSS! Let’s do this my love~"}
               onClick={() => navigate("/workout")}
             ></Button>
 
             <Button
-              is_light={is_light}
-              is_primary={false}
+              isLight={isLight}
+              isPrimary={false}
               text={`Oh no! Hold on, I gotta go poop :"`}
               onClick={() => navigate("/timer")}
             ></Button>
@@ -47,7 +48,7 @@ function HomePage() {
         </section>
       )}
 
-      <Footer is_light={is_light}></Footer>
+      <Footer isLight={isLight}></Footer>
     </div>
   );
 }
