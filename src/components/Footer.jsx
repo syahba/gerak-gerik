@@ -12,7 +12,7 @@ function Footer({ isLight }) {
   return (
     <footer className={`${styles} flex justify-between items-center px-6 py-2 w-full`}>
       <img
-        src={isLight ? "./logo-dark.webp" : "./logo-light.webp"}
+        src={isLight ? "/gerak-gerik/logo-dark.webp" : "/gerak-gerik/logo-light.webp"}
         alt="logo"
         className="max-w-14"
       />

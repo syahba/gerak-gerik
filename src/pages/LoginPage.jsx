@@ -27,14 +27,14 @@ function LoginPage() {
     <div className="bg-[var(--white-color)] screen">
       <Navbar isLight={isLight}></Navbar>
 
-      <form className="content gap-2">
+      <div className="content gap-2">
         <h1>Password, please?</h1>
         <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="border border-[var(--primary-color)] rounded-full py-2 px-4 mb-12 w-60"
+          className="border border-[var(--primary-color)] rounded-full py-2 px-4 mb-6 w-60"
         />
 
         <Button
@@ -43,7 +43,7 @@ function LoginPage() {
           text={"Submit here!"}
           onClick={handleLogin}
         ></Button>
-      </form>
+      </div>
 
       <Footer isLight={isLight}></Footer>
     </div>

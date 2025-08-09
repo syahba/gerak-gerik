@@ -14,7 +14,7 @@ function FinalPage() {
     contents.h1 = "Well done, my love! I’m so proud of you <3";
     contents.h2 = `Your workout journey with me has just begun!
     Here’s a badge to mark this special day:`;
-    contents.img = "./doodles-2.webp";
+    contents.img = "doodles-2.webp";
   } else if (
     specialStreaks.includes(streak) ||
     (streak >= 30 && streak % 30 === 0)
@@ -22,12 +22,12 @@ function FinalPage() {
     contents.h1 = `OMG, BABEY! You’ve hit a ${streak}-day streak!`;
     contents.h2 = `You’re just so handsome, smart, cool, passionate, 
     and now, muscley! hehe :D Here’s your well-deserved special badge, king:`;
-    contents.img = "./doodles-2.webp";
+    contents.img = "doodles-2.webp";
   } else {
     contents.h1 = "YEAY! Another great day of burning ‘em calories~";
     contents.h2 = `Get a drink, sit down, and rest your body babe. 
     I know you’re exhausted :p This is you right now, and I’m loving it:`;
-    contents.img = "./doodles-3.webp";
+    contents.img = "doodles-3.webp";
   }
 
   return (

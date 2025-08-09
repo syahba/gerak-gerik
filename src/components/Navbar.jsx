@@ -8,7 +8,7 @@ function Navbar({ isLight }) {
       } py-2 flex justify-center items-center`}
     >
       <img
-        src={isLight ? "./logo-dark.webp" : "./logo-light.webp"}
+        src={isLight ? "/gerak-gerik/logo-dark.webp" : "/gerak-gerik/logo-light.webp"}
         alt="logo"
         className="max-w-14"
       />

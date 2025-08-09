@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "../index.css";
 import { getWorkoutStatus } from "../utils/tracker";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 function HomePage() {
   const isLight = false;
@@ -38,7 +38,7 @@ function HomePage() {
           <h1 className="text-[var(--white-color)]">
             Hi mas, ready for today’s workout session?
           </h1>
-          <img src="./doodles-1.webp" alt="Illustration" className="max-w-96" />
+          <img src="/gerak-gerik/doodles-1.webp" alt="Illustration" className="max-w-96" />
 
           <div className="flex flex-col max-w-max gap-4 my-4">
             <Button
